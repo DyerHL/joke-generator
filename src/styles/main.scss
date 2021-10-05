@@ -1,2 +1,25 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
+
+body {
+    color: rgb(201, 201, 201);
+    background-color: black;
+}
+
+#buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+#jokesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+}
+
+#punchlineContainer {
+    margin: 5%;
+}
