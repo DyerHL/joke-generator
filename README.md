@@ -10,26 +10,22 @@
 
 ## Code Snippet 
 ```javascript
-const domEvents = () => {
-  document.querySelector('#buttonsContainer').addEventListener('click', (e) => {
-    // CLICK EVENT FOR GET A JOKE BUTTON
-    if (e.target.id.includes('Joke')) {
-      document.querySelector('#punchlineContainer').innerHTML = `
-      `;
-      getJoke().then(showJoke);
+
+document.querySelector('#mainContainer').addEventListener('click', (e) => {
+    if (e.target.id === 'getAJoke' || e.target.id === 'getAnotherJoke') {
+      jokeData().then((response) => {
+        showJoke(response);
+        document.querySelector('#mainContainer').innerHTML = `<h1>${joke.setup}</h1>`;
+        getPunchlineButton();
+      });
     }
-    // CLICK EVENT FOR GET PUNCHLINE BUTTON
-    if (e.target.id.includes('getPunchline')) {
-      getJoke().then(showPunchline);
-      getAnotherJokeButton();
-    }
-  });
-};
 
 ```
 ## ScreenShots
 
-![image](https://user-images.githubusercontent.com/86806913/136116812-c5ded1be-6905-472d-843c-f4749108a21c.png)
+![image](https://user-images.githubusercontent.com/86806913/137170751-816d8910-c04a-47a1-b815-842eab62217d.png)
+<br>
+![image](https://user-images.githubusercontent.com/86806913/137170826-4b0c24b3-f89e-4f7a-a9ed-23eaa84775a8.png)
 
 ## Relevent Links
 - [View App](https://joke-generator-webpack-hld.netlify.app)
