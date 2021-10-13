@@ -3,23 +3,12 @@
 
 body {
     color: rgb(201, 201, 201);
-    background-color: black;
+    background-color: rgb(39, 39, 39);
 }
 
-#buttonsContainer {
+#mainContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 20px;
-}
-
-#jokesContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 5%;
-}
-
-#punchlineContainer {
-    margin: 5%;
+    margin: 10%;
 }
